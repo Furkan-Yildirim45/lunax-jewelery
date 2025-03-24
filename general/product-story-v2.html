@@ -1,0 +1,280 @@
+<div class="container">
+    <div class="linear-bg">
+        <div class="radial-bg">
+            <div class="story-container">
+                <h1 class="story-title">Miranın Destansı Dünyasına Bir Adım At</h1>
+                <div class="story-content">
+                    <div class="story-image">
+                        <img src="https://cdn.shopify.com/s/files/1/0718/0645/1735/files/mira-story.png?v=1742809464"
+                            alt="Mira Hikayesi" />
+                    </div>
+                    <div class="story-text">
+                        <h2>Bir Zamanlar ...</h2>
+                        <p>
+                            Gökyüzünde Mira adında bir yıldız parıldardı. Efsanelere göre Mira, aşkını dile getiremeyen
+                            bir prensesin ruhuydu. Kalbindeki tarifsiz duyguları yıldızlara fısıldayan prenses, ışığıyla
+                            gökyüzüne aşkın sessizliğini işlemişti.
+                        </p>
+                        <p>
+                            Yüzyıllar sonra, bir adam sevdiği kadına olan derin hislerini kelimelerle anlatmanın
+                            yetersizliğini hissetti. Her kelime, kalbindeki aşkı ifade etmekte aciz kalıyordu. Mira'yı
+                            izlerken düşündü: "Eğer duygularımı anlatamıyorsam, onları bir sembolle ifade etmeliyim."
+                        </p>
+                        <div class="extra-content">
+                            <p>
+                                O gece, Mira'nın ışığından ilham alarak bu kolyeyi tasarladı. Zarif detayları ve eşsiz
+                                ışıltısıyla, kalpte saklanan ama dile dökülemeyen duyguların simgesi oldu. Kolyeyi
+                                sevdiği kadına uzatırken yalnızca şunu söyledi: "Hissettiklerimin tarifi burada saklı."
+                            </p>
+                            <p>
+                                Mira kolyesi, içten gelen ama dile getirilemeyen aşkların bir ifadesi. Sevdiklerinize
+                                anlatamadığınız o derin hislerinizi Mira ile fısıldayın. Çünkü bazı duygular, sadece
+                                hissedilir.
+                            </p>
+                        </div>
+                        <a href="#" class="story-button" onclick="toggleStory(event)">Devamını oku
+                            <span>&#10140;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .story-container {
+        position: relative;
+        text-align: center;
+        color: #d9a679;
+        font-family: 'Cinzel', serif;
+    }
+
+    .story-title {
+        font-size: 2.3vw;
+        /* Küçültülmüş font boyutu */
+        margin-bottom: 2vh;
+        /* Responsive margin */
+        color: #D4A373;
+        font-family: 'Playwrite US Modern', serif;
+        font-style: italic;
+        /* Playwrite fontunu başlıkta kullan */
+    }
+
+    .story-content {
+        display: flex;
+        /* Flex kullanarak resim ve yazıyı yan yana koyuyoruz */
+        align-items: flex-start;
+        /* Üstten hizalama */
+        justify-content: space-between;
+        /* Aralarındaki boşluğu ayarlıyoruz */
+        gap: 2vw;
+        /* Responsive boşluk */
+    }
+
+    .story-image {
+        flex: 0 0 auto;
+        /* Resmin genişliği sabit kalacak şekilde */
+        width: 20vw;
+        /* Responsive genişlik */
+        height: auto;
+        /* Yüksekliği orantılı olarak ayarlıyoruz */
+        border-radius: 1vw;
+        /* Responsive border-radius */
+    }
+
+    .story-text {
+        max-width: 40vw;
+        /* Responsive yazı alanı genişliği */
+        text-align: left;
+        margin-top: 2vh;
+        /* Responsive margin */
+    }
+
+    .story-text h2 {
+        font-size: 1.9vw;
+        /* Küçültülmüş font boyutu */
+        margin-bottom: 1.5vh;
+        /* Responsive margin */
+        color: #D4A373;
+        font-style: italic;
+        font-family: 'Playwrite US Modern', serif;
+        /* Aynı font */
+    }
+
+    .story-text p {
+        font-size: 1.2vw;
+        /* Küçültülmüş font boyutu */
+        line-height: 1.9;
+        font-family: 'Prata', serif;
+        /* Prata fontu paragraflar için */
+        color: #FFFEFA;
+    }
+
+    .extra-content {
+        display: none;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.5s ease, max-height 0.5s ease;
+    }
+
+    .story-button {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.3vw;
+        /* Küçültülmüş font boyutu */
+        color: #d9a679;
+        text-decoration: none;
+        border-bottom: 2px solid #d9a679;
+        padding-bottom: 0.4vh;
+        /* Responsive padding */
+        cursor: pointer;
+    }
+
+    .story-button span {
+        margin-left: 0.8vw;
+        /* Responsive margin */
+        font-size: 1.5vw;
+        /* Küçültülmüş font boyutu */
+    }
+
+    /* Medya Sorguları */
+    @media (max-width: 768px) {
+        .story-title {
+            font-size: 7vw;
+            /* Mobil için daha büyük başlık */
+        }
+
+        .story-content {
+            flex-direction: column;
+            /* Mobilde dikey hizalama */
+            align-items: center;
+            /* Ortada hizalama */
+            width: 100%;
+            /* İçeriğin genişliğini sınırlıyoruz */
+        }
+
+        .story-image {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 1vw;
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* Resmin orijinal oranları korunarak tam görünmesini sağla */
+            object-position: center;
+            /* Resmi merkezde konumlandır */
+        }
+
+        .story-text {
+            max-width: 100%;
+            /* Mobilde yazı alanı genişliği */
+            padding-left: 2vw;
+            /* Kenar boşluğu ekleyebilirsiniz */
+            padding-right: 2vw;
+            /* Kenar boşluğu ekleyebilirsiniz */
+        }
+
+        .story-text h2 {
+            font-size: 5vw;
+            /* Mobil için başlık boyutu */
+        }
+
+        .story-text p {
+            font-size: 3.5vw;
+            /* Mobil için paragraf boyutu */
+        }
+
+        .story-button {
+            font-size: 3.5vw;
+            /* Mobil için buton boyutu */
+        }
+
+        .container {
+            height: auto;
+            /* Yüksekliği otomatik ayarlıyoruz */
+        }
+
+        .radial-bg{
+            height: auto;
+        }
+
+        .linear-bg {
+            height: auto;
+            /* Yüksekliği otomatik ayarlıyoruz */
+        }
+    }
+</style>
+
+<script>
+    function toggleStory(event) {
+        event.preventDefault();
+        const extraContent = document.querySelector('.extra-content');
+        const button = event.target.closest('.story-button');
+
+        if (extraContent.style.display === 'none' || extraContent.style.display === '') {
+            extraContent.style.display = 'block';
+            setTimeout(() => {
+                extraContent.style.opacity = '1';
+                extraContent.style.maxHeight = '500px';
+            }, 10);
+            button.innerHTML = 'Daha az oku <span>&#9660;</span>';
+        } else {
+            extraContent.style.opacity = '0';
+            extraContent.style.maxHeight = '0';
+            setTimeout(() => {
+                extraContent.style.display = 'none';
+            }, 500);
+            button.innerHTML = 'Devamını oku <span>&#10140;</span>';
+        }
+    }
+</script>
+
+
+<style>
+    .container {
+        box-sizing: border-box;
+        width: 100%;
+        height: 150vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+        /* Container'da taşmalar engelleniyor */
+    }
+
+    .linear-bg {
+        background: linear-gradient(to bottom, #2e2e2e 0%, #0D0D0D 10%, #0D0D0D 90%, #2e2e2e 100%);
+        height: 150vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .radial-bg {
+        background: radial-gradient(ellipse at 50% 50%,
+                rgba(120, 10, 15, 1) 0%,
+                rgba(90, 10, 15, 0.8) 25%,
+                rgba(60, 10, 15, 0.5) 50%,
+                rgba(30, 10, 15, 0.3) 65%,
+                rgba(13, 13, 13, 0.2) 75%,
+                rgba(13, 13, 13, 0.1) 85%,
+                rgba(13, 13, 13, 0.05) 90%,
+                rgba(13, 13, 13, 0.02) 95%,
+                rgba(13, 13, 13, 0) 100%);
+        width: 75vw;
+        aspect-ratio: 1 / 1;
+        max-height: 110vh;
+        border-radius: 50%;
+    }
+</style>

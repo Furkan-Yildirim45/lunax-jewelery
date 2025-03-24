@@ -1,0 +1,133 @@
+<div class="container">
+  <div class="social-media">
+    <ul class="social-links">
+      <li>
+        <a rel="nofollow" target="_blank" href="https://www.facebook.com/share/1FmJdmGwFS/">
+          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+            stroke-linejoin="round" color="" height="40" width="40" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a rel="nofollow" target="_blank" href="https://www.instagram.com/lunaxjewelery/">
+          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+            stroke-linejoin="round" color="" height="40" width="40" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a rel="nofollow" target="_blank" href="https://www.tiktok.com/@lunaxjewelery" class="tiktok-custom-class">
+          <img src="{{ 'tiktok-logo.png' | file_url }}" alt="TikTok Logo" width="40" height="40">
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="payment-methods">
+    <img src="https://cdn.shopify.com/s/files/1/0718/0645/1735/files/v.png?v=1725182081" alt="Visa">
+    <img src="https://cdn.shopify.com/s/files/1/0718/0645/1735/files/m.png?v=1725182081" alt="MasterCard">
+    <img src="https://cdn.shopify.com/s/files/1/0718/0645/1735/files/a.png?v=1725182081" alt="American Express">
+    <img src="https://cdn.shopify.com/s/files/1/0718/0645/1735/files/s.png?v=1725182081" alt="Stripe">
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    text-align: center;
+  }
+
+
+  .social-media,
+  .payment-methods {
+    margin: 0 20px;
+  }
+
+  .social-links,
+  .payment-methods {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-links li,
+  .payment-methods img {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .payment-methods img,
+  .social-links svg,
+  .tiktok-custom-class img {
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+  }
+
+  .social-links svg {
+    stroke: white;
+    stroke-width: 1;
+    fill: none;
+    transition: transform 0.3s ease;
+  }
+
+  /* TikTok logosu için hover efekti */
+  .tiktok-custom-class img:hover {
+    transform: scale(1.2); /* Büyütme efekti */
+  }
+
+  @media (max-width: 768px) {
+
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+      flex-direction: row;
+      height: auto;
+    }
+
+    .social-media,
+    .payment-methods {
+      margin: 10px 0;
+    }
+
+    .social-links li,
+    .payment-methods img {
+      margin: 0 5px;
+    }
+
+    .payment-methods img,
+    .social-links svg,
+    .tiktok-custom-class img {
+      height: 30px;
+      width: 30px;
+    }
+
+    /* Mobil cihazlarda TikTok logosu için hover efekti devre dışı bırak */
+    .tiktok-custom-class img:hover {
+      transform: none;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .social-links svg:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    .social-links svg {
+      transition: none;
+    }
+
+    .social-links svg:hover {
+      transform: none;
+    }
+  }
+</style>

@@ -1,0 +1,53 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const popupHTML = `
+        <div id="popup" style="display: none; position: fixed; top: 0; right: 0; z-index: 9999; font-family: sans-serif;">
+          <div style="background-color: #2f2f2f; color: #ffffff; padding: 20px; border-radius: 12px; max-width: 300px; text-align: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transform: translateY(-100%); opacity: 0; transition: transform 0.5s ease, opacity 0.5s ease; position: relative;">
+            <!-- Kapatma butonu -->
+            <button id="closePopup" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: red; font-size: 20px; cursor: pointer;">✖</button>
+            
+            <p style="font-size: 16px; color: #cccccc; font-family: sans-serif;">
+              Ürünlerde Stoklar tükeniyor, İndirimli fırsatları kaçırmamak için <span style="color: red; font-weight: bold;">acele et!</span>
+            </p>
+          </div>
+        </div>
+      `;
+  
+      document.body.insertAdjacentHTML("beforeend", popupHTML);
+  
+      function showPopup() {
+        const popup = document.getElementById("popup");
+        const popupContent = popup.querySelector("div");
+        popup.style.display = "flex";
+        popup.style.justifyContent = "flex-end";
+        popup.style.alignItems = "flex-start";
+        popup.style.padding = "20px";
+  
+        setTimeout(() => {
+          popupContent.style.transform = "translateY(0)";
+          popupContent.style.opacity = "1";
+        }, 50);
+  
+      }
+  
+      function hidePopup() {
+        const popupContent = document.querySelector("#popup div");
+        popupContent.style.transform = "translateY(-100%)";
+        popupContent.style.opacity = "0";
+  
+        setTimeout(() => {
+          document.getElementById("popup").style.display = "none";
+        }, 500);
+      }
+  
+      // Kapatma butonu tıklanınca pop-up'ı kapat
+      document.addEventListener("click", function (event) {
+        if (event.target.id === "closePopup") {
+          hidePopup();
+        }
+      });
+  
+      setTimeout(showPopup, 2000);
+      setTimeout(hidePopup, 10000);
+    });
+  </script>

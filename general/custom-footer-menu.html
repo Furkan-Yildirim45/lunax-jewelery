@@ -1,0 +1,116 @@
+<div class="footer">
+    <div class="footer__content-top page-width">
+        <div
+            class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet scroll-trigger animate--slide-in">
+            <!-- Menü 1: Kurumsal -->
+            <div class="footer-block scroll-trigger animate--slide-in">
+                <p class="footer-block__heading">Mağaza Hakkında</p>
+                <ul class="footer-block__links list-unstyled">
+                    <li><a href="/pages/hakkimizda" class="link">Hakkımızda</a></li>
+                    <li><a href="/pages/hi̇zmet-sartlari" class="link">Hizmet Şartları</a></li>
+                </ul>
+            </div>
+            <!-- Menü 2: Yardım -->
+            <div class="footer-block scroll-trigger animate--slide-in">
+                <p class="footer-block__heading">Müşteri Hizmetleri</p>
+                <ul class="footer-block__links list-unstyled">
+                    <li><a href="/pages/contact" class="link">İletişim</a></li>
+                    <li><a href="/pages/musteri-hizmetleri" class="link">Müşteri Hizmetleri</a></li>
+                </ul>
+            </div>
+            <!-- Menü 3: Sözleşmeler -->
+            <div class="footer-block scroll-trigger animate--slide-in">
+                <p class="footer-block__heading">Yasal Bilgiler</p>
+                <ul class="footer-block__links list-unstyled">
+                    <li><a href="/pages/mesafeli̇-satis-sozlesmesi̇" class="link">Mesafeli Satış Sözleşmesi</a></li>
+                    <li><a href="/pages/gi̇zli̇li̇k-poli̇ti̇kasi" class="link">Gizlilik Politikası</a></li>
+                    <li><a href="/pages/uyelik-sozlesmesi" class="link">Üyelik Sözleşmesi</a></li>
+                    <li><a href="/pages/i̇ade-poli̇ti̇kasi" class="link">İade Politikası</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  <style>
+  .footer {
+    background-color: #000000; /* Footer arka plan rengi */
+    padding: 20px 0;
+  }
+  
+  .footer__content-top {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer__blocks-wrapper {
+    display: flex; /* Flexbox düzeni kullanarak yan yana hizalama */
+    flex-wrap: wrap; /* Ekran boyutuna göre menülerin taşmasını sağlar */
+    gap: 20px;
+  }
+  
+  .footer-block {
+    background-color: #000000; /* Footer bloklarının arka plan rengi */
+    padding: 15px;
+    border-radius: 8px;
+    /* Border kaldırıldı, border: none; yazılmasına gerek yok */
+    flex: 1; /* Blokların eşit genişlikte olmasını sağlar */
+    min-width: 200px; /* Her bloğun minimum genişliğini ayarlayarak taşmayı engeller */
+  }
+  
+  .footer-block__heading {
+    color: #fff; /* Menü başlıklarının rengi beyaz */
+    font-size: 18px; /* Başlık boyutu */
+    font-weight: bold; /* Başlık kalın */
+    margin: 0 0 10px 0; /* Başlık altındaki boşluk */
+  }
+  
+  .footer-block__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-block__links li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-block__links .link {
+    text-decoration: none; /* Alt çizgi yok */
+    color: #fff; /* Menü öğelerinin rengi beyaz */
+    font-size: 14px; /* Menü öğesi boyutu */
+    position: relative; /* Konumlandırmayı sağlamak için */
+    transition: transform 0.3s ease, color 0.3s ease; /* Kaydırma ve renk değişimleri için animasyon */
+  }
+  
+  .footer-block__links .link:hover {
+    color: #f5f5f5; /* Hover durumunda renk değişimi */
+    transform: translateX(5px); /* Sağ tarafa 5px kaydırma */
+  }
+  
+  .footer-block__links .link::after {
+    content: ''; /* Alt çizgi için boş içerik */
+    position: absolute; /* Konumlandırmayı sağlamak için */
+    left: 0;
+    bottom: -2px; /* Alt çizgiyle metin arasındaki boşluk */
+    width: 0; /* Başlangıçta genişlik 0 */
+    height: 2px; /* Alt çizginin kalınlığı */
+    background-color: #f5f5f5; /* Alt çizginin rengi */
+    transition: width 0.3s ease; /* Alt çizginin genişliğinin animasyonu */
+  }
+  
+  .footer-block__links .link:hover::after {
+    width: 100%; /* Hover durumunda alt çizginin genişliği */
+  }
+
+   /* Mobil ekranlar için */
+   @media (max-width: 1080px) {
+    .footer-block__links .link:hover {
+      transform: none; /* Hover durumunda kaydırmayı engelle */
+    }
+
+  }
+  
+  </style>

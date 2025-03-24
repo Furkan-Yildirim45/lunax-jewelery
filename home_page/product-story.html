@@ -1,0 +1,39 @@
+<!-- Ürünün Hikayesi -->
+<div class="product-story">
+    <h2 class="story-title">
+        {{ 'Bu kolye, bir tasarımcının bir gün batımında ormanın derinliklerinde yürüyüş yaparken bulduğu zarif bir
+        yapraktan ilham aldı. Altın sarısı güneşin ışıkları, yaprağın üzerindeki damlalarla dans ederken, tasarımcının
+        aklına bir fikir geldi: Doğanın bu saf güzelliğini yakalayan bir kolye yaratmak. İşte, her detayıyla doğanın
+        zarafetini yansıtan bu özel kolye böyle doğdu.' | escape }}
+    </h2>
+    <p class="story-content">
+        {{ product.metafields.custom.story | escape }}
+    </p>
+</div>
+
+<!-- CSS ile Stil Verme -->
+<style>
+    /* Özel fontu tanımlayın */
+    @font-face {
+        font-family: 'Felt Condolences';
+        src: url('https://cdn.shopify.com/s/files/1/0718/0645/1735/files/Lobster-Regular.woff2?v=1724073632') format('woff2'),
+             url('https://cdn.shopify.com/s/files/1/0718/0645/1735/files/Lobster-Regular.woff?v=1724073632') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* Kolyenin hikaye başlığı için özel yazı tipi */
+    .story-title {
+        font-family: 'Felt Condolences', serif;
+        font-size: 24px;
+        color: #ffffff;
+    }
+
+    /* Kolyenin hikaye içeriği için özel yazı tipi */
+    .story-content {
+        font-family: 'Felt Condolences', serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #ffffff;
+    }
+</style>

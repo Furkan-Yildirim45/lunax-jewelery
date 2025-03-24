@@ -1,0 +1,12 @@
+#cart-notification-form {
+    background-color: #a93226;
+    border: 0.rem solid rgb(var(--color-button-border));
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+#cart-notification-form:hover {
+    border: 0.rem solid rgb(var(--color-button-border));
+    border-radius: 0.3rem;
+    background-color: #c0392b;
+}

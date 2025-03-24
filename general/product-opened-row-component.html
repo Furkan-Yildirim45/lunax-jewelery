@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Özellikleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+        }
+
+        .features-container {
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+            justify-content: space-between; /* Köşelere göndermek için */
+            align-items: center;
+            max-width: 100%; /* Genişlik sınırlamasını kaldır */
+            margin: 20px auto;
+            background-color: transparent;
+            flex-wrap: wrap; /* Taşan öğeleri alt satıra taşı */
+        }
+
+        .feature-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 150px; /* Sabit genişlik */
+            margin: 10px; /* Kolonlar arasında boşluk */
+        }
+
+        .feature-column i {
+            font-size: 24px; /* İkon boyutu */
+            color: #fff;
+            margin-bottom: 8px; /* İkon ve metin arasındaki boşluk */
+        }
+
+        .feature-column p {
+            font-size: 18px; /* Metin boyutu */
+            color: #fff;
+            margin: 0; /* Metin etrafındaki boşluk */
+            word-wrap: break-word; /* Uzun kelimeleri kırarak devam etmesini sağlar */
+            white-space: normal; /* Satır sonlarını yönetir */
+        }
+
+        @media (max-width: 768px) {
+            .features-container {
+                flex-direction: row; /* Yan yana düzenleme */
+                justify-content: space-around; /* Boşlukları ayarla */
+            }
+
+            .feature-column {
+                width: 30%; /* Genişliği yüzde olarak ayarla */
+                margin: 10px 0; /* Üst ve alt boşluk */
+            }
+
+            .feature-column i {
+                font-size: 20px; /* Daha küçük ikon boyutu */
+            }
+
+            .feature-column p {
+                font-size: 16px; /* Daha küçük metin boyutu */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .feature-column {
+                width: 45%; /* Küçük ekranlar için genişliği daha da küçült */
+            }
+        }
+    </style>    
+</head>
+
+<body>
+    <div class="features-container">
+        <!-- Ücretsiz Kargo Bölmesi -->
+        <div class="feature-column">
+            <i class="fas fa-truck"></i>
+            <p>Ücretsiz Kargo</p>
+        </div>
+
+        <!-- Koşulsuz İade Bölmesi -->
+        <div class="feature-column">
+            <i class="fas fa-undo"></i>
+            <p>Koşulsuz İade</p>
+        </div>
+
+        <!-- 7/24 Müşteri Hizmeti Bölmesi -->
+        <div class="feature-column">
+            <i class="fas fa-question-circle"></i>
+            <p>7/24 Müşteri Hizmeti</p>
+        </div>
+    </div>
+</body>
+
+</html>

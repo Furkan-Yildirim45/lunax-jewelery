@@ -1,0 +1,49 @@
+<div class="announcement-bar">
+    <div class="announcement-text">
+        Duyuru: İlk alışverişinize özel %10 indirim! Lunax Ailesi’ne katılın, dilediğiniz üründe indirimi yakalayın!
+    </div>
+</div>
+
+<style>
+    .announcement-bar {
+        width: 100%;
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        height: 50px; /* Yüksekliği biraz arttırdım, böylece metin daha rahat yerleşir */
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        overflow: hidden;
+    }
+
+    .announcement-text {
+        display: inline-block;
+        white-space: nowrap;
+        padding-left: 100%; /* Metni sağdan başlatır */
+        font-size: 16px; /* Yazı boyutunu artırdım */
+        font-family: Arial, sans-serif; /* Daha okunabilir bir font */
+        font-weight: bold; /* Yazıyı daha belirgin yapmak için kalın yapıldı */
+        animation: scroll-text linear infinite;
+        animation-duration: 20s; /* Animasyon süresi biraz uzatıldı */
+    }
+
+    @keyframes scroll-text {
+        from {
+            transform: translateX(100%); /* Metin ekranın tamamen dışından başlar */
+        }
+        to {
+            transform: translateX(-100%); /* Metin ekranın solundan tamamen çıkar */
+        }
+    }
+
+    /* Mobil cihazlar için responsive ayar */
+    @media (max-width: 768px) {
+        .announcement-text {
+            font-size: 14px; /* Mobil için yazı boyutunu küçültüyoruz */
+            animation-duration: 10s; /* Mobil için animasyon süresini kısaltıyoruz */
+        }
+    }
+</style>

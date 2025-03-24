@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSS Bölümü</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #666;
+            border-radius: 8px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            background-color: transparent;
+            color: #fff;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            position: relative;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .faq-question:hover {
+            transform: translateX(15px);
+            /* Sağ kaydırma */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            /* Animasyon */
+        }
+
+        .faq-question::before {
+            /* content: "\f0c9"; */
+            /* Font Awesome icon code */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 10px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .faq-answer {
+            background-color: transparent;
+            font-size: 14px;
+            color: white;
+            border-radius: 0 0 4px 4px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            padding: 0 15px;
+        }
+
+        .faq-answer.active {
+            padding: 15px 15px 30px;
+        }
+
+        .faq-question .toggle-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .toggle-icon {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+         /* Mobil ekranlar için hover efektini devre dışı bırak */
+         @media (max-width: 1080px) {
+            .faq-question:hover {
+                transform: none;
+            }   
+
+            .faq-question {
+                padding-right: 40px; /* Mobil ekranlar için ikon için daha fazla alan */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-shipping-fast"></i> <!-- Bu ikonu değiştirildi -->
+                Ürünüm ne zaman elime ulaşır?
+                <i class="toggle-icon fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">Siparişiniz genellikle 3-5 iş günü içinde teslim edilir. Kargo süresi, teslimat adresinize bağlı olarak değişebilir.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-credit-card"></i> <!-- Bu ikonu değiştirildi -->
+                Ödeme seçenekleri nelerdir?
+                <i class="toggle-icon fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">Kredi kartı, banka kartı ve kapıda ödeme seçenekleri ile alışveriş yapabilirsiniz.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-calculator"></i> <!-- Bu ikonu değiştirildi -->
+                Ürünlerde taksit seçeneği var mıdır?
+                <i class="toggle-icon fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">Evet, bazı ürünlerde taksit seçeneği sunulmaktadır. Taksit seçeneklerini ödeme ekranında görebilirsiniz.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-map-marker-alt"></i> <!-- Bu ikonu değiştirildi -->
+                Kargomu nasıl takip edebilirim?
+                <i class="toggle-icon fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">Kargo takip numaranızı, sipariş onay e-postasında bulabilirsiniz. Bu numarayı kargo firmasının web sitesinde kullanarak paketinizi takip edebilirsiniz.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-truck"></i> <!-- Bu ikonu değiştirildi -->
+                Hangi kargo firmaları ile çalışıyorsunuz?
+                <i class="toggle-icon fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">Genellikle [Kargo Firması 1] ve [Kargo Firması 2] ile çalışıyoruz. Siparişleriniz bu firmalar tarafından teslim edilir.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-undo"></i> <!-- Bu ikonu değiştirildi -->
+                İade ettiğim ürünün ücretini ne zaman geri alabilirim?
+                <i class="toggle-icon fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">İade işlemi tamamlandıktan sonra ücretiniz genellikle 5-7 iş günü içinde geri ödenir. Ödeme yöntemine bağlı olarak süre değişebilir.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-gem"></i> <!-- Bu ikonu değiştirildi -->
+                Kolyeleriniz hangi malzemelerden yapılmıştır?
+                <i class="toggle-icon fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">Kolyelerimiz yüksek kaliteli gümüş, altın ve özel taşlarla yapılmaktadır. Her ürünün malzeme bilgisi ürün açıklamasında yer almaktadır.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-spray-can"></i> <!-- Bu ikonu değiştirildi -->
+                Kolyelerinizin bakımını nasıl yapmalıyım?
+                <i class="toggle-icon fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">Kolyelerinizin uzun ömürlü olması için nemden uzak tutun ve düzenli olarak temizleyin. Ürünle birlikte gelen bakım talimatlarına uyun.</div>
+        </div>
+    </div>
+    
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.toggle-icon');
+
+                // Toggle active class on the FAQ item
+                faqItem.classList.toggle('active');
+
+                if (faqItem.classList.contains('active')) {
+                    const scrollHeight = answer.scrollHeight;
+                    answer.style.paddingBottom = '15px'; // Alt tarafa padding ekle
+                    answer.style.maxHeight = (scrollHeight + 15) + 'px'; // max-height + padding
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    answer.style.maxHeight = '0';
+                    answer.style.paddingBottom = '0'; // Alt padding'i sıfırla
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

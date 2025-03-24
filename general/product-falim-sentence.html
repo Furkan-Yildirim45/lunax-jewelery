@@ -1,0 +1,41 @@
+<div class="custom-text">
+    <style>
+      .custom-text {
+        font-family: 'Lora', serif; /* Google Fonts'tan alınan yazı tipi */
+        text-align: center; /* Metni ortalar */
+        padding: 20px; /* Alan boşluğu */
+        color: #fff; /* Metin rengi (beyaz) */
+        position: relative; /* Çizgilerin konumlandırılması için */
+  
+      }
+  
+      .custom-text::before,
+      .custom-text::after {
+        content: ''; /* Boş içerik; çizgi göstermek için */
+        display: block;
+        width: 100%; /* Çizgiyi tam genişlikte yapar */
+        height: 0.5px; /* Çizgi kalınlığı */
+        background-color: #fff; /* Çizgi rengi (beyaz) */
+        position: absolute; /* Konumlandırma */
+        left: 0;
+        border-top: 1px dashed #fff; /* Kesikli çizgi */
+      }
+  
+      .custom-text::before {
+        top: -10px; /* Üst çizgi */
+      }
+  
+      .custom-text::after {
+        bottom: -10px; /* Alt çizgi */
+      }
+  
+      .custom-text p {
+        font-size: 18px; /* Paragraf font boyutu */
+        font-weight: 400; /* Paragraf kalınlığı */
+        line-height: 1.6; /* Satır yüksekliği */
+        margin: 0; /* Üst ve alt boşlukları kaldırır */
+      }
+    </style>
+    
+    <p>Zaman, en değerli hazinendir; onu bilgelikle harca</p>
+  </div>

@@ -1,0 +1,136 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünün Hikayesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+        }
+
+        .product-container {
+            max-width: 830px;
+            margin: 20px auto;
+            background-color: transparent;
+            border-radius: 8px;
+        }
+
+        .product-story {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-story .product-button {
+            padding: 8px;
+            /* Daha küçük padding */
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            width: 100%;
+            border-left: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            /* Başlık ve ikon arasını ayırır */
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-story .toggle-icon {
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-button span {
+            flex-grow: 1;
+            /* Başlık metnini ortalamak için */
+            text-align: center;
+            /* Başlığı ortalar */
+        }
+
+        .product-description {
+            background-color: transparent;
+            font-size: 14px;
+            color: white;
+            display: block;
+            transition: max-height 0.5s ease, padding 0.3s ease-out;
+            overflow: hidden;
+            max-height: 0;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            box-sizing: border-box;
+            /* Padding ve border dahil */
+            padding: 0 15px;
+            /* Kapalıyken padding sıfırlanır */
+
+        }
+
+        .product-story.active .product-description {
+            height: auto;
+            /* İçeriğin boyutuna göre otomatik ayarla */
+            transition: all 0.5s ease;
+            /* Yumuşak geçiş */
+        }
+
+
+        .product-story.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-container">
+        <div class="product-story">
+            <div class="product-button">
+                <span>Ürünün Hikayesi</span>
+                <i class="toggle-icon fas fa-chevron-down"></i>
+            </div>
+            <div class="product-description">
+                <p>
+                    Lunax evreninde, Nova Çiçeği’nin yalnızca yeniden doğmaya kararlı olanlara göründüğü söylenirdi. Bu çiçeğin ruhları iyileştiren ve insanlara cesaret veren bir gücü olduğu rivayet edilirdi; ancak bu mucizenin ardındaki gerçek, efsaneler kadar belirsizdi.
+
+Avelia, bir zamanlar Lunax’ın ünlü hikâye anlatıcılarındandı. Ancak sevdiği bir arkadaşını trajik bir şekilde kaybettikten sonra, neşesi ve ilhamı silinmişti. Yazdığı hiçbir hikâye eskisi gibi olmuyor, içindeki acı onu tüketiyordu. Hayatının bir dönüm noktasında, Nova Çiçeği’nin efsanesini duydu ve bu umut ışığını takip etmeye karar verdi. “Belki de bu çiçek beni geçmişin karanlığından kurtarabilir,” diye düşündü.
+
+Avelia, Lunax’ın vadilerine doğru uzun ve zorlu bir yolculuğa çıktı. Yol boyunca karşılaştığı doğa, ona hem geçmişindeki güzel anıları hem de kaybettiği dostunun tüm yaşamını hatırlattı. Bu yolculuk yalnızca bir arayış değil, aynı zamanda içsel bir yüzleşmeydi.
+
+Günlerce çiçeği aradı. Nihayetinde, bir vadinin derinliklerinde Nova Çiçeği’nin ışığıyla karşılaştı. Çiçeğin yaydığı büyü, Avelia’nın içinde bir farkındalık uyandırdı: Geçmiş anılarına bir hayalet gibi bakabiliyor, geçmişin acılarını yeniden hissedebiliyordu. Ancak bu anlar, bir saatmiş gibi uzarken aslında sadece birkaç saniyeydi. O anda beyninde çakan bir şimşekle, acıların yok edilemeyeceğini, ancak kabul edilip anlamlandırılabileceğini fark etti. Çiçeğin gücünü anlamaya çalışırken, bunun sihirden öte, insanın içsel gücüyle birleştiğinde ortaya çıkan bir enerji olduğunu keşfetti.
+
+Kasabasına döndüğünde, Avelia yalnızca kendi ruhunu iyileştirmekle kalmadı, eski ilhamını, neşesini ve gücünü geri kazandı. Yine festivallerde davet edilip güzel hikayelerle etrafını canlandırabiliyor, gülümsetip eğlendirebiliyordu. Bu güzel duygularına itafen, hikayelerinde Nova Çiçeği’nin hikâyesini yayarak başkalarına da umut verdi. Artık çiçek, taze başlangıçların ve neşenin sembolü haline gelmişti. Ancak bir şey hala bilinmiyordu: Bu çiçeğin gerçek gücü neydi?
+
+Avelia’nın hikâyesinden ilham alan Lunax’ın zanaatkâr cüceleri, Nova Çiçeği’nin güzelliğini ve anlamını bir kolyeye işlemek istediler. Her yaprak detayı, neşe ve umut dolu bir başlangıcı simgeleyecek şekilde özenle tasarlandı. Canlı renkli taşlar, Nova Çiçeği’nin ışığını yansıtırken, kolyenin zarif şekli sadeliği ve samimiyeti simgeliyordu.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.product-button').addEventListener('click', function () {
+            const productStory = this.parentElement;
+            const description = productStory.querySelector('.product-description');
+            const icon = this.querySelector('.toggle-icon');
+
+            // Toggle active class on the product story
+            productStory.classList.toggle('active');
+
+            if (productStory.classList.contains('active')) {
+                description.style.maxHeight = description.scrollHeight + 'px'; // İçeriğin yüksekliğini ayarla
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                description.style.maxHeight = '0'; // Kapatırken yüksekliği sıfırla
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        });
+    </script>
+</body>
